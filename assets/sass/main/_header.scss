@@ -1,0 +1,38 @@
+.header {
+  @include adaptive(padding-top, 16, 24);
+  @include adaptive(padding-bottom, 24, 40);
+
+  &__items {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu {
+    @include adaptive(margin-left, 12, 200);
+
+    ul {
+      display: flex;
+
+      li {
+        @include adaptive(margin-right, 12, 40);
+
+        a {
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 14px;
+          letter-spacing: 1.4;
+          font-weight: medium;
+
+          &:hover {
+            color: #1983FF;
+            transition: all 0.6s ease;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

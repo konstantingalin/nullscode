@@ -1,0 +1,12 @@
+@import url("../tools/normalize.min.css");
+
+@import "main/mixins";
+@import "main/variables";
+@import "main/defaults";
+@import "main/additionals";
+@import "main/main";
+@import "main/media.scss";
+
+
+@import "main/header";
+@import "main/footer";

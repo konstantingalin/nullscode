@@ -1,0 +1,19 @@
+:root {
+  --clr-white: #ffffff;
+  --clr-black: #1E1B1B;
+  --clr-gray-lt: #f3f5f9;
+  --clr-gray: #596060;
+  --clr-accent: #FF6C18;
+
+  --font-main: "Inter", Arial, Helvetica, sans-serif;
+
+  --fz56: clamp(20px, 2.91vw, 56px);
+  --fz40: clamp(18px, 2.08vw, 40px);
+  --fz32: clamp(18px, 1.66vw, 32px);
+  --fz28: clamp(18px, 1.45vw, 28px);
+  --fz24: clamp(18px, 1.46vw, 24px);
+  --btn24: clamp(15px, 1.46vw, 24px);
+  --fz21: clamp(15px, 1.09vw, 21px);
+  --fz20: clamp(15px, 1.04vw, 20px);
+  --fz16: clamp(14px, 0.83vw, 16px);
+}

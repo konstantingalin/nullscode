@@ -1,0 +1,46 @@
+@use 'sass:math';
+
+$projectWidth: 1920;
+
+@mixin adaptive($property, $minValue, $maxValue, $breakPoint: $projectWidth) {
+	$min: $minValue + px;
+	$max: $maxValue + px;
+
+	@if ($breakPoint) {
+		$coeff: math.div($breakPoint, 100);
+		$vw: calc(round(math.div($maxValue, $coeff) * 1000) / 1000)+vw;
+
+		// check negative/positive value
+		@each $name,
+		$char in str($minValue) and str($maxValue) {
+			@if (str-index($name, '-')) {
+				// for negative clamp()
+				#{$property}: clamp(#{$max}, #{$vw}, #{$min});
+			}
+
+			@else {
+				// for positive clamp()
+				#{$property}: clamp(#{$min}, #{$vw}, #{$max});
+			}
+		}
+	}
+
+	@else {
+		$coeff: math.div($projectWidth, 100);
+		$vw: calc(round(math.div($maxValue, $coeff) * 1000) / 1000)+vw;
+
+		// check negative/positive value
+		@each $name,
+		$char in str($minValue) and str($maxValue) {
+			@if (str-index($name, '-')) {
+				// for negative clamp()
+				#{$property}: clamp(#{$max}, #{$vw}, #{$min});
+			}
+
+			@else {
+				// for positive clamp()
+				#{$property}: clamp(#{$min}, #{$vw}, #{$max});
+			}
+		}
+	}
+}

@@ -1,2 +1,0 @@
-# nullscode
-wp_nullscode

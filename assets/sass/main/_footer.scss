@@ -1,0 +1,86 @@
+.footer {
+  @include adaptive(margin-top, 16, 64);
+  @include adaptive(padding-top, 16, 64);
+  @include adaptive(padding-bottom, 16, 64);
+  background: #232323;
+
+  &__items {
+    display: flex;
+
+		@media (max-width: 600px) {
+      flex-wrap: wrap;
+
+			&__menu {
+				width: 47% !important;
+				margin-right: 3% !important;
+			}
+	
+			&__info {
+				width: 50% !important;
+				margin-right: 0% !important;
+			}
+	
+			&__schedule {
+				margin-top: 20px;
+				width: 47% !important;
+				margin-right: 3% !important;
+			}
+	
+			&__contacts {
+				margin-top: 20px;
+				width: 50% !important;
+			}
+    }
+
+    h3 {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #505050;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      li {
+        margin-bottom: 6px;
+
+        a {
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: #757575;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .instagram-link {
+      background: url('../public/icons/instagram_icon.png') 0 0 no-repeat !important;
+      padding-left: 24px;
+    }
+
+    &__menu {
+      width: 16%;
+      margin-right: 3%;
+    }
+
+    &__info {
+      width: 16%;
+      margin-right: 3%;
+    }
+
+    &__schedule {
+      width: 16%;
+      margin-right: 7%;
+    }
+
+    &__contacts {
+      width: 21%;
+    }
+  }
+}
